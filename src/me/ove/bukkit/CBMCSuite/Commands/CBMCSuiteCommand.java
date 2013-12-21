@@ -15,7 +15,10 @@ import org.bukkit.entity.Player;
 
 public class CBMCSuiteCommand implements CommandExecutor {
 	
-	
+	//
+	// NEWS CLASS
+	//
+	String NEWS = ChatColor.GRAY+ "No news.";
 	
 	public static final Logger log = Logger.getLogger("Minecraft");
 	
@@ -43,7 +46,7 @@ public class CBMCSuiteCommand implements CommandExecutor {
 	        
 	        if(args.length == 0) {
 	        	p.sendMessage(pc1+ "CBMCSuite Coded By " +ChatColor.BLUE+ "Ove98 " +pc1+ "& " +ChatColor.BLUE+ "CreeperAnatomy");
-	        	p.sendMessage(pc1+ "Type " +pc2+ "/Hub Help" +pc1+ " To view all available commands.");
+	        	p.sendMessage(NEWS);
 	        }
 
 	        

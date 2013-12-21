@@ -43,23 +43,24 @@ public class HubCommand implements CommandExecutor {
 	        
 	        if(args.length == 0) {
 	        	p.sendMessage(pc1+ "CBMCSuite Coded By " +ChatColor.BLUE+ "Ove98 " +pc1+ "& " +ChatColor.BLUE+ "CreeperAnatomy");
-	        	p.sendMessage(pc1+ "Type " +pc2+ "/CBMCSuite Help" +pc1+ " To view all available commands.");
+	        	p.sendMessage(pc1+ "Type " +pc2+ "/Hub Help" +pc1+ " To view all available commands.");
 	        }
 	        
 	        else if(args.length == 1) {
 	        	if(args[0].equalsIgnoreCase("Help")) {
 		        	p.sendMessage(pc2+ "[   CBMCSuite Help   ]");
-		        	p.sendMessage(pc1+ "");
-		        	p.sendMessage(pc1+ "");
-		        	p.sendMessage(pc1+ "");
-		        	p.sendMessage(pc1+ "");
-		        	p.sendMessage(pc1+ "");
-		        	p.sendMessage(pc1+ "");
+		        	p.sendMessage(pc2+ "/CBMCSuite" +pc1+ " - Displays important plugin news.");
+		        	p.sendMessage(pc2+ "/Hub Version" +pc1+ " - Displays the current version of the plugin.");
+		        	p.sendMessage(pc2+ "/Hub" +pc1+ " - ");
+		        	p.sendMessage(pc2+ "/Hub" +pc1+ " - ");
+		        	p.sendMessage(pc2+ "/Hub" +pc1+ " - ");
+		        	p.sendMessage(pc2+ "/Hub" +pc1+ " - ");
+
 
 
 	        	}
 	        	
-	        	else if(args[0].equalsIgnoreCase("Version")) {
+	        	else if(args[0].equalsIgnoreCase("Version") || args[0].equalsIgnoreCase("Ver")) {
 	        		p.sendMessage(x+ "Current Version: " +ChatColor.ITALIC+ manager.getConfig().getDouble("Plugin.Version"));
 	        	}
 	        	
