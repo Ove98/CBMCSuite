@@ -5,3 +5,16 @@
 
 Plugin:
   Version: 1.0
+  
+  
+PlayerJoin:
+
+  Enable:
+    MOTD: true
+    PotionEffects: true
+    JoinClear&Kit: true
+    WelcomeBroadcast: true
+    
+  Messages:
+    Welcome: $logo$ Welcome to $cbmc$, $player$!
+    MOTD: Welcome back to $cbmc$, $player$! (Plugin $plugin$ By $devs$)

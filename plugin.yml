@@ -1,22 +1,14 @@
 name: CBMCSuite
-
 main: me.ove.bukkit.CBMCSuite.CBMCSuite
-
 author: Ove98&CreeperAnatomy
-
 version: 1.0
-
 description: Simple Hub Manager!
-
 commands:
-
   hub:
-    description: Main command.
-    
+    description: Main command. 
   cbmcsuite:
     description: Mainly the Dev command. + News command.
-    permissions: cbmc.news/dev
-    
   infosign:
-    description: [Info] sign tutorial.
-    permissions: cbmc.signs.use/create
+    description: Infosign tutorials and information.
+  cancel:
+    description: Cancel an info-string set action.

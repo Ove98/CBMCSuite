@@ -18,7 +18,6 @@ public class CBMCSuiteCommand implements CommandExecutor {
 	//
 	// NEWS CLASS
 	//
-	String NEWS = ChatColor.GRAY+ "No news.";
 	
 	public static final Logger log = Logger.getLogger("Minecraft");
 	
@@ -30,7 +29,8 @@ public class CBMCSuiteCommand implements CommandExecutor {
 	ChatColor pec1 = ChatColor.RED; /*pec1 == Primary Error Colour 1*/
 	
 	String x = pc2 + "[tjXHub] " + pc1;
-	
+	String NEWS = pc1+ "+ New [Info] sign tutorial! " +pc2+ "http://youtu.be/VhfZKeuG18Q";
+
 	
 	
 	@Override
@@ -45,7 +45,7 @@ public class CBMCSuiteCommand implements CommandExecutor {
 	        
 	        if(args.length == 0) {
 	        	if(p.hasPermission("cbmc.news")) {
-	        		p.sendMessage(x+NEWS);
+	        		p.sendMessage(NEWS);
 	        	} else {p.sendMessage(x+pec1+ "You are not allowed to read the news.");}
 	        }
 
