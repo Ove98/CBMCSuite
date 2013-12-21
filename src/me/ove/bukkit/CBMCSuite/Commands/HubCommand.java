@@ -62,6 +62,11 @@ public class HubCommand implements CommandExecutor {
 	        		p.sendMessage(x+ "Current Version: " +ChatColor.ITALIC+ manager.getConfig().getDouble("Plugin.Version"));
 	        	}
 	        	
+	        	else if(args[0].equalsIgnoreCase("Information") || args[0].equalsIgnoreCase("Info") {
+	        		p.sendMessage("CBMC Hub is a plugin designed for the CB-MC server, it's the newest Hub plugin that enhances your server experience.")
+	        	        p.sendMessage(ChatColor.GRAY + "Created By Ove98 & CreeperAtonomy");
+	        	}
+	        	
 	        	else {
 		        	p.sendMessage(x+pec1+ "Invalid command!");	
 	        	}
