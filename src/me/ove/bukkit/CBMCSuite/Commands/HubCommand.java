@@ -49,7 +49,7 @@ public class HubCommand implements CommandExecutor {
 		        	p.sendMessage(pc2+ "[   CBMCSuite Help   ]");
 		        	p.sendMessage(pc2+ "/CBMCSuite" +pc1+ " - Displays important plugin news.");
 		        	p.sendMessage(pc2+ "/Hub Version" +pc1+ " - Displays the current version of the plugin.");
-		        	p.sendMessage(pc2+ "/Hub" +pc1+ " - ");
+		        	p.sendMessage(pc2+ "/Hub Information" +pc1+ " - Displays some info about this plugin.");
 		        	p.sendMessage(pc2+ "/Hub" +pc1+ " - ");
 		        	p.sendMessage(pc2+ "/Hub" +pc1+ " - ");
 		        	p.sendMessage(pc2+ "/Hub" +pc1+ " - ");
@@ -61,6 +61,13 @@ public class HubCommand implements CommandExecutor {
 	        	else if(args[0].equalsIgnoreCase("Version") || args[0].equalsIgnoreCase("Ver")) {
 	        		p.sendMessage(x+ "Current Version: " +ChatColor.ITALIC+ manager.getConfig().getDouble("Plugin.Version"));
 	        	}
+	        	
+	        	else if(args[0].equalsIgnoreCase("Information") || args[0].equalsIgnoreCase("Info")) {
+	        		p.sendMessage(x+ ChatColor.GRAY + "Created By Ove98 & CreeperAtonomy");
+	        		p.sendMessage(x+ "CBMC Hub is a plugin designed for the CB-MC server, it's the newest Hub plugin that enhances your server experience.");
+	        	}
+	        	
+	        	
 	        	
 	        	else {
 		        	p.sendMessage(x+pec1+ "Invalid command!");	
