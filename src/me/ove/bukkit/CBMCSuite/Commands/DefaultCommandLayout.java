@@ -23,7 +23,7 @@ public class DefaultCommandLayout implements CommandExecutor {
 	
 	double ver = manager.getConfig().getDouble("Plugin.Version");
 	
-	ChatColor pc1 = ChatColor.WHITE; /*pc1 == Primary Colour 1*/
+	ChatColor pc1 = ChatColor.GRAY; /*pc1 == Primary Colour 1*/
 	ChatColor pc2 = ChatColor.DARK_AQUA; /*pc2 == Primary Colour 2*/
 	ChatColor pec1 = ChatColor.RED; /*pec1 == Primary Error Colour 1*/
 	

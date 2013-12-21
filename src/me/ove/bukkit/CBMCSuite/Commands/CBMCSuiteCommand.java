@@ -24,9 +24,8 @@ public class CBMCSuiteCommand implements CommandExecutor {
 	
 	CBMCSuiteManager manager = CBMCSuiteManager.getInstance();
 	
-	double ver = manager.getConfig().getDouble("Plugin.Version");
 	
-	ChatColor pc1 = ChatColor.WHITE; /*pc1 == Primary Colour 1*/
+	ChatColor pc1 = ChatColor.GRAY; /*pc1 == Primary Colour 1*/
 	ChatColor pc2 = ChatColor.DARK_AQUA; /*pc2 == Primary Colour 2*/
 	ChatColor pec1 = ChatColor.RED; /*pec1 == Primary Error Colour 1*/
 	
@@ -45,8 +44,7 @@ public class CBMCSuiteCommand implements CommandExecutor {
         if(cmd.getName().equalsIgnoreCase("CBMCSuite")) {	        
 	        
 	        if(args.length == 0) {
-	        	p.sendMessage(pc1+ "CBMCSuite Coded By " +ChatColor.BLUE+ "Ove98 " +pc1+ "& " +ChatColor.BLUE+ "CreeperAnatomy");
-	        	p.sendMessage(NEWS);
+	        	p.sendMessage(x+NEWS);
 	        }
 
 	        

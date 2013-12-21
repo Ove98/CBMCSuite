@@ -20,6 +20,7 @@ public class CBMCSuite extends JavaPlugin {
         log.info("[tjXHub] has been enabled.");
         getCommand("Hub").setExecutor(new HubCommand());
         getCommand("CBMCSuite").setExecutor(new CBMCSuiteCommand());
+        manager.setup(this);
     }
 
 
