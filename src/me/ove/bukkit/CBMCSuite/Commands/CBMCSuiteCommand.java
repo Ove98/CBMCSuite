@@ -44,11 +44,23 @@ public class CBMCSuiteCommand implements CommandExecutor {
         if(cmd.getName().equalsIgnoreCase("CBMCSuite")) {	        
 	        
 	        if(args.length == 0) {
-	        	p.sendMessage(x+NEWS);
+	        	if(p.hasPermission("cbmc.news")) {
+	        		p.sendMessage(x+NEWS);
+	        	} else {p.sendMessage(x+pec1+ "You are not allowed to read the news.");}
+	        }
+
+	        if(args.length == 1) {
+	        	if(p.hasPermission("cbmc.dev")) {
+		        	if(args[0].equalsIgnoreCase("Reload")) {p.sendMessage(x+ "Reloading the .yml files..."); manager.reloadConfig(); manager.reloadData(); p.sendMessage(x+ "Done.");}
+		        	else if(args[0].equalsIgnoreCase("Test")) {p.sendMessage(x+ "Coming soon");}
+		        	else if(args[0].equalsIgnoreCase("Save")) {p.sendMessage(x+ "Saving the .yml files..."); manager.saveConfig(); manager.saveData(); p.sendMessage(x+ "Done.");}
+		        	else if(args[0].equalsIgnoreCase("ClearData")) {p.sendMessage(x+ "Clearing all saved data..."); manager.getData().set("", null); p.sendMessage(x+ "Done.");}
+		        	else {p.sendMessage(x+pec1+ "Invalid command!");}
+	        	} else {p.sendMessage(x+pec1+ "Only developers are allowed to run this command.");}
 	        }
 
 	        
-	        else if(args.length > 0) {
+	        else if(args.length > 1) {
 	        	p.sendMessage(x+pec1+ "Invalid command!");
 	        }
 	        
