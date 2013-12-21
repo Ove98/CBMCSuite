@@ -9,6 +9,8 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 
+//Creeper Was Here, PUNK
+
 public class CBMCSuiteManager {
 	       private CBMCSuiteManager() { }
 	      
