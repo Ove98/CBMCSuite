@@ -6,6 +6,7 @@ import me.ove.bukkit.CBMCSuite.CBMCSuiteManager;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -27,6 +28,7 @@ public class JoinListener implements Listener {
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent e) {
 		
+		
 		/*Strings & Valuables*/
 		//////////////////////////////////////////////////////////////////////
 		CBMCSuiteManager manager = CBMCSuiteManager.getInstance();
@@ -39,11 +41,14 @@ public class JoinListener implements Listener {
 		//////////////////////////////////////////////////////////////////////
 
 		
+		
+		
+		
 		/*Message Of The Day (MOTD)*/
 		//////////////////////////////////////////////////////////////////////
 		if(manager.getConfig().getString("PlayerJoin.Enable.MOTD").equalsIgnoreCase("true")) {
 			
-			p.sendMessage("==========================================");
+			p.sendMessage(pc1+"==========================================");
 			
 			p.sendMessage("+ "+pc1+ manager.getConfig().getString("MOTD.Message")
 					.replace("$cbmc$", pc2+"CB-MC"+pc1)
@@ -52,10 +57,12 @@ public class JoinListener implements Listener {
 					.replace("$player$", p.getName())
 					.replace("$devs$", pc2+"Ove98 & CreeperAnatomy"+pc1) );
 			
-			p.sendMessage("==========================================");
+			p.sendMessage(pc1+"==========================================");
 		}
 		//////////////////////////////////////////////////////////////////////
 
+		
+		
 		
 		
 		
@@ -67,6 +74,8 @@ public class JoinListener implements Listener {
 		}
 		//////////////////////////////////////////////////////////////////////
 
+		
+		
 		
 		
 		
@@ -86,6 +95,8 @@ public class JoinListener implements Listener {
 
 		
 		
+		
+		
 		/*Welcome Kit*/
 		//////////////////////////////////////////////////////////////////////
 		if(manager.getConfig().getString("PlayerJoin.Enable.JoinClear&Kit").equalsIgnoreCase("true")) {
@@ -103,5 +114,22 @@ public class JoinListener implements Listener {
 			pi.addItem(new ItemStack(item)); //Adds the item to your inventory
 		}
 		//////////////////////////////////////////////////////////////////////
+		
+		
+		
+		
+		
+		/*Adventure GameMode*/
+		//////////////////////////////////////////////////////////////////////
+		if(manager.getConfig().getString("PlayerJoin.Enable.AdventureModeHub").equalsIgnoreCase("true")) {
+			if(p.isOp()) {
+				p.setGameMode(GameMode.CREATIVE);
+			} else {
+				p.setGameMode(GameMode.ADVENTURE);
+			}
+		}
+		//////////////////////////////////////////////////////////////////////
+
+		
 	}
 }

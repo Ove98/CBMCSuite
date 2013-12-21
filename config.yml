@@ -13,6 +13,7 @@ PlayerJoin:
     MOTD: true
     PotionEffects: true
     JoinClear&Kit: true
+    AdventureModeHub: true
     WelcomeBroadcast: true
     
   Messages:

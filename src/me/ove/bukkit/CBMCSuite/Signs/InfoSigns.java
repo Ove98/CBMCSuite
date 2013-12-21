@@ -58,7 +58,12 @@ public class InfoSigns implements Listener {
                     if (s.getLine(0).equalsIgnoreCase(ChatColor.DARK_BLUE + "[Info]")) {
                     	Player p = (Player) e.getPlayer();
                     	if(p.hasPermission("cbmc.signs.use")) {
-                    		p.sendMessage(ChatColor.GRAY + manager.getData().getString("InfoSigns." + s.getLine(1).toLowerCase()).replace("$logo$", x));
+                    		p.sendMessage(ChatColor.GRAY + manager.getData().getString("InfoSigns." + s.getLine(1).toLowerCase())
+                    				.replace("$cbmc$", pc2+"CB-MC"+pc1)
+            						.replace("$logo$", pc2+"[tjXHub]"+pc1)
+            						.replace("$plugin$", pc2+"CBMCSuite"+pc1)
+            						.replace("$player$", p.getName())
+            						.replace("$devs$", pc2+"Ove98 & CreeperAnatomy"+pc1));
                     	} else {p.sendMessage(x+pec1+ "You do not have the cbmc.signs.use permission.");}
                     }
             }

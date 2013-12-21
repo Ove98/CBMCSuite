@@ -52,9 +52,9 @@ public class CBMCSuiteCommand implements CommandExecutor {
 	        if(args.length == 1) {
 	        	if(p.hasPermission("cbmc.dev")) {
 		        	if(args[0].equalsIgnoreCase("Reload")) {p.sendMessage(x+ "Reloading the .yml files..."); manager.reloadConfig(); manager.reloadData(); p.sendMessage(x+ "Done.");}
-		        	else if(args[0].equalsIgnoreCase("Test")) {p.sendMessage(x+ "Coming soon");}
+		        	else if(args[0].equalsIgnoreCase("Test")) {p.sendMessage(x+ "Testing..."); p.sendMessage(x+ "Test successful.");}
 		        	else if(args[0].equalsIgnoreCase("Save")) {p.sendMessage(x+ "Saving the .yml files..."); manager.saveConfig(); manager.saveData(); p.sendMessage(x+ "Done.");}
-		        	else if(args[0].equalsIgnoreCase("ClearData")) {p.sendMessage(x+ "Clearing all saved data..."); manager.getData().set("", null); p.sendMessage(x+ "Done.");}
+		        	else if(args[0].equalsIgnoreCase("ClearData")) {p.sendMessage(x+ "Clearing all saved data..."); manager.getData().set("InfoSigns", ""); p.sendMessage(x+ "Done.");}
 		        	else {p.sendMessage(x+pec1+ "Invalid command!");}
 	        	} else {p.sendMessage(x+pec1+ "Only developers are allowed to run this command.");}
 	        }
