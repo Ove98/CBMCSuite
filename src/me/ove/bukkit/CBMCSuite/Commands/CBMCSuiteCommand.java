@@ -26,6 +26,7 @@ public class CBMCSuiteCommand implements CommandExecutor {
 	ChatColor pc1 = ChatColor.WHITE; /*pc1 == Primary Colour 1*/
 	ChatColor pc2 = ChatColor.DARK_AQUA; /*pc2 == Primary Colour 2*/
 	ChatColor pec1 = ChatColor.RED; /*pec1 == Primary Error Colour 1*/
+	ChatColor pec2 = ChatColor.ITALIC;
 	
 	String x = pc2 + "[tjXHub] " + pc1;
 	
@@ -49,7 +50,7 @@ public class CBMCSuiteCommand implements CommandExecutor {
 	        else if(args.length == 1) {
 	        	if(args[0].equalsIgnoreCase("Help")) {
 		        	p.sendMessage(pc2+ "[   CBMCSuite Help   ]");
-		        	p.sendMessage(pc1+ "");
+		        	p.sendMessage(pc1+ "/Version");
 		        	p.sendMessage(pc1+ "");
 		        	p.sendMessage(pc1+ "");
 		        	p.sendMessage(pc1+ "");
@@ -57,6 +58,12 @@ public class CBMCSuiteCommand implements CommandExecutor {
 		        	p.sendMessage(pc1+ "");
 
 
+	        	}
+	        }
+	        
+	        else if (args.length == 1) {
+	        	if (args[0].equalsIgnoreCase("Version")) {
+	        		p.sendMessage(pc2 + "CBMC Version: " + pec2 + manager.getConfig().getDouble("Plugin.Version");
 	        	}
 	        }
 	        
