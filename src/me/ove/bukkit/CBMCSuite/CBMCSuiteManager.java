@@ -9,6 +9,11 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginDescriptionFile;
 
+//
+// CBMCSuite By Ove98 & CreeperAnatomy
+// Copyright (c) OveHenrik 2013
+//
+
 public class CBMCSuiteManager {
 	       private CBMCSuiteManager() { }
 	      
