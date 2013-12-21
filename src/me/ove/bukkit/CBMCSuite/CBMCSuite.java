@@ -1,6 +1,10 @@
 package me.ove.bukkit.CBMCSuite;
 
 import java.util.logging.Logger;
+
+import me.ove.bukkit.CBMCSuite.Commands.CBMCSuiteCommand;
+import me.ove.bukkit.CBMCSuite.Commands.HubCommand;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
 //
@@ -14,6 +18,8 @@ public class CBMCSuite extends JavaPlugin {
 	
     public void onEnable() {
         log.info("[tjXHub] has been enabled.");
+        getCommand("Hub").setExecutor(new HubCommand());
+        getCommand("CBMCSuite").setExecutor(new CBMCSuiteCommand());
     }
 
 

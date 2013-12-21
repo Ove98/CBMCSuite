@@ -13,7 +13,7 @@ import org.bukkit.entity.Player;
 // Copyright (c) OveHenrik 2013
 //
 
-public class CBMCSuiteCommand implements CommandExecutor {
+public class HubCommand implements CommandExecutor {
 	
 	
 	
@@ -39,15 +39,37 @@ public class CBMCSuiteCommand implements CommandExecutor {
         
         
         
-        if(cmd.getName().equalsIgnoreCase("CBMCSuite")) {	        
+        if(cmd.getName().equalsIgnoreCase("Hub")) {	        
 	        
 	        if(args.length == 0) {
 	        	p.sendMessage(pc1+ "CBMCSuite Coded By " +ChatColor.BLUE+ "Ove98 " +pc1+ "& " +ChatColor.BLUE+ "CreeperAnatomy");
-	        	p.sendMessage(pc1+ "Type " +pc2+ "/Hub Help" +pc1+ " To view all available commands.");
+	        	p.sendMessage(pc1+ "Type " +pc2+ "/CBMCSuite Help" +pc1+ " To view all available commands.");
 	        }
-
 	        
-	        else if(args.length > 0) {
+	        else if(args.length == 1) {
+	        	if(args[0].equalsIgnoreCase("Help")) {
+		        	p.sendMessage(pc2+ "[   CBMCSuite Help   ]");
+		        	p.sendMessage(pc1+ "");
+		        	p.sendMessage(pc1+ "");
+		        	p.sendMessage(pc1+ "");
+		        	p.sendMessage(pc1+ "");
+		        	p.sendMessage(pc1+ "");
+		        	p.sendMessage(pc1+ "");
+
+
+	        	}
+	        	
+	        	else if(args[0].equalsIgnoreCase("Version")) {
+	        		p.sendMessage(x+ "Current Version: " +ChatColor.ITALIC+ manager.getConfig().getDouble("Plugin.Version"));
+	        	}
+	        	
+	        	else {
+		        	p.sendMessage(x+pec1+ "Invalid command!");	
+	        	}
+	        	
+	        }
+	        
+	        else if(args.length > 1) {
 	        	p.sendMessage(x+pec1+ "Invalid command!");
 	        }
 	        
