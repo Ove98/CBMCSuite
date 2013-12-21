@@ -48,6 +48,7 @@ public class HubCommand implements CommandExecutor {
 	        	if(args[0].equalsIgnoreCase("Help")) {
 		        	p.sendMessage(pc2+ "[   CBMCSuite Help   ]");
 		        	if(p.hasPermission("cbmc.news") || p.hasPermission("cbmc.dev")) {p.sendMessage(pc2+ "/CBMCSuite" +pc1+ " - Displays important plugin news.");}
+		        	if(p.hasPermission("cbmc.signs.create") || p.hasPermission("cbmc.signs.use")) {p.sendMessage(pc2+ "/InfoSign" +pc1+ " - [Info] sign tutorial.");}
 		        	if(p.hasPermission("cbmc.version")) {p.sendMessage(pc2+ "/Hub Version" +pc1+ " - Displays the current version of the plugin.");}
 		        	if(p.hasPermission("cbmc.info")) {p.sendMessage(pc2+ "/Hub Information" +pc1+ " - Displays some info about this plugin.");}
 		        	p.sendMessage(pc2+ "/Hub" +pc1+ " - ");

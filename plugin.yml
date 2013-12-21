@@ -14,5 +14,9 @@ commands:
     description: Main command.
     
   cbmcsuite:
-    description: Mainly the Dev command.
-    permissions: cbmc.news
+    description: Mainly the Dev command. + News command.
+    permissions: cbmc.news/dev
+    
+  infosign:
+    description: [Info] sign tutorial.
+    permissions: cbmc.signs.use/create
